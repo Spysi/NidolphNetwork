@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
 
   let tomute = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
   if(!tomute) return message.reply("Не могу найти такого пользователя.");
-  if(tomute.hasPermission("MANAGE_MESSAGES")) return message.reply("У тебя тряпки нет. Прости. :thinkaboutit:");
+  if(tomute.hasPermission("MANAGE_MESSAGES")) return message.reply("низя.");
   if(!message.member.hasPermission("MANAGE_ROLES")) return message.channel.send("Слушай, а ты уверен, что ты так можешь? :thinking:");
   let muterole = message.guild.roles.find(`name`, "Замученные (не)петушки");
   let muteReason = args.join(" ").slice(22);
