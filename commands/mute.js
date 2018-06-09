@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
   if(!tomute) return message.reply("Не могу найти такого пользователя.");
   if(tomute.hasPermission("MANAGE_MESSAGES")) return message.reply("низя.");
   if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Слушай, а ты уверен, что ты так можешь? :thinking:");
-  let muterole = message.guild.roles.find(`name`, "Замученные (не)петушки");
+  let muterole = message.guild.roles.find(`name`, "Заглушенные");
   let muteReason = args.join(" ").slice(22);
   //start of create role
   if(!muterole){
