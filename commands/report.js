@@ -16,12 +16,9 @@ module.exports.run = async (bot, message, args) => {
     .setFooter("Просба администрации ответить на жалобу");
 
     let reportschannel = message.guild.channels.find(`name`, "репорты");
-    if(!reportschannel) return message.channel.send("Произошла ошибка. Пожалуйста, обратитесь к администрации.");
-
 
     message.delete().catch(O_o=>{});
     reportschannel.send(reportEmbed);
-
 }
  
 module.exports.help = {
