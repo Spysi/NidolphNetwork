@@ -17,9 +17,6 @@ module.exports.run = async (bot, message, args) => {
     .addField("Причина:", breason)
     .setFooter("Пожалуйста, не нарушайте правила сервера!");
 
-    let reportschannel = message.guild.channels.find(`name`, "🔊-общий-чат");
-    if(!reportschannel) return message.channel.send("Произошла ошибка с каналом. Пожалуйста, обратитесь к старшей администрации.");
-
     message.guild.member(bUser).ban(breason);
     return message.channel.send(banEmbed);
 }
