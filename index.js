@@ -32,6 +32,7 @@ bot.on("ready", async () => {
 bot.on("message", async message => {
    if(message.author.bot) return;
    if(message.channel.type === "dm") return;
+   if(message.content.indexOf(botconfig.prefix) !== 0) return;
 
    let prefix = botconfig.prefix;
    let messageArray = message.content.split(" ");
