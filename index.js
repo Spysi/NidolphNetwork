@@ -61,4 +61,4 @@ bot.on("guildMemberRemove", async member =>{
   welcome.send(`Ну е-мое! К сожалению, ${member} ушел от нас. Лучше вернись, мы о тебе уже скучаем!`)
 })
 
-bot.login(botconfig.token);
+bot.login(process.env.bot_token);
