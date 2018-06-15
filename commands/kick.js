@@ -16,9 +16,6 @@ module.exports.run = async (bot, message, args) => {
     .addField("Причина:", kreason)
     .setFooter("Пожалуйста, не нарушайте правила сервера!");
 
-    let reportschannel = message.guild.channels.find(`name`, "общий-чат");
-    if(!reportschannel) return message.channel.send("Произошла ошибка. Пожалуйста, обратитесь к старшей администрации.");
-
     message.guild.member(kUser).kick(kreason);
     return message.channel.send(kickEmbed);
 }
