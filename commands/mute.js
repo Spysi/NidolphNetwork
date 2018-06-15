@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
     try{
       muterole = await message.guild.createRole({
         name: "Заглушенные",
-        color: "#000000",
+        color: "#FF0000",
         permissions:[]
       })
       message.guild.channels.forEach(async (channel, id) => {
