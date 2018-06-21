@@ -24,7 +24,7 @@ fs.readdir("./commands/", (err, files) => {
 
 
 bot.on("ready", async () => {
-  console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
+  console.log(`Бот ${bot.user.username} готов к работе. Онлайн на ${bot.guilds.size} серверах!`);
 
   bot.user.setActivity(
     "твою вебку. Заклей ее.", {
