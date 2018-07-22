@@ -12,7 +12,6 @@ module.exports.run = async (bot, message, args) => {
   }
   if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Слушай, а ты уверен, что ты так можешь? :thinking:");
   let muterole = message.guild.roles.find(`name`, "Заглушенные");
-  let muteReason = args.join(" ").slice(22);
   //start of create role
   if(!muterole){
     try{
@@ -43,7 +42,6 @@ module.exports.run = async (bot, message, args) => {
   .addField("Кем заглушен:", `${message.author}`)
   .addField("Время:", message.createdAt)
   .addField("Заглушен на:", `${ms(ms(mutetime))}`)
-  .addField("Причина:", muteReason)
   .setFooter("Пожалуйста, не нарушайте правила сервера!");
 
   message.channel.send(muteEmbed);
