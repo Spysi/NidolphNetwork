@@ -27,7 +27,7 @@ bot.on("ready", async () => {
   console.log(`Бот ${bot.user.username} готов к работе. Онлайн на ${bot.guilds.size} серверах!`);
 
   bot.user.setActivity(
-    "гиги за шаги 10 часов", {
+    "попсу", {
       type: 2
     });
 });
