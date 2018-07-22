@@ -53,7 +53,6 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#66ff33")
     .addField("Разглушен:", `${tomute}`)
     .addField("Был заглушен на:", `${ms(ms(mutetime))}`)
-    .addField("Причина:", muteReason)
     .setFooter("Пожалуйста, не нарушайте правила сервера!");
 
     message.channel.send(unmuteEmbed);
