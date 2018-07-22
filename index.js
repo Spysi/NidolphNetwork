@@ -27,7 +27,7 @@ bot.on("ready", async () => {
   console.log(`Бот ${bot.user.username} готов к работе. Онлайн на ${bot.guilds.size} серверах!`);
 
   bot.user.setActivity(
-    "попсу", {
+    "треки Twenty One Pilots. Создатель одобряет.", {
       type: 2
     });
 });
