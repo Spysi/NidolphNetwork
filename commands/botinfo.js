@@ -8,6 +8,7 @@ module.exports.run = async (bot, message, args) => {
     .setThumbnail(botIcon)
     .addField("Название:", bot.user.username)
     .addField("Создан:", "Дерес ;3")
+    .addField("Спасибо за помощь:", "sqdEclipse") //Эклипс, гордись собой :D
     .addField("Создан в:", bot.user.createdAt)
     .addField("Специально для сервера:", "Nidolph (discord.gg/8QFREG2)")
     .addField("Версия:", "0.2.0 (Alpha)")
