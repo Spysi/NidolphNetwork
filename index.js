@@ -27,8 +27,8 @@ bot.on("ready", async () => {
   console.log(`Бот ${bot.user.username} готов к работе. Онлайн на ${bot.guilds.size} серверах!`);
 
   bot.user.setActivity(
-    "где Дерес ;3", {
-      type: 3
+    "в ожидание статуса [!setactivity]", {
+      type: 1
     });
 });
 
