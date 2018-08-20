@@ -33,6 +33,9 @@ module.exports.run = async (bot, message, args) => {
   //end of create role
   let mutetime = args[1];
   if(!mutetime) return message.reply("Вы не указали время!");
+  
+  let erer = args.slice(2).join(' ');;
+if(!erer) return message.reply("Вы не указали причину!");
 
   await(tomute.addRole(muterole.id));
   let muteEmbed = new Discord.RichEmbed()
@@ -42,6 +45,7 @@ module.exports.run = async (bot, message, args) => {
   .addField("Кем заглушен:", `${message.author}`)
   .addField("Время:", message.createdAt)
   .addField("Заглушен на:", `${ms(ms(mutetime))}`)
+  .addField("По причине:", `${erer}`)
   .setFooter("Пожалуйста, не нарушайте правила сервера!");
 
   message.channel.send(muteEmbed);
@@ -53,6 +57,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#66ff33")
     .addField("Разглушен:", `${tomute}`)
     .addField("Был заглушен на:", `${ms(ms(mutetime))}`)
+    .addField("По причине:", `${erer}`)
     .setFooter("Пожалуйста, не нарушайте правила сервера!");
 
     message.channel.send(unmuteEmbed);
