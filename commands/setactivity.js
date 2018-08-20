@@ -8,11 +8,11 @@ let what = args.slice(1).join(' ');
 
 if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("Слушай, а ты уверен, что ты так можешь? :thinking:"); 
 
-if(!type) return message.channel.send("ДАГ ШО МНЕ ДЕЛАТЬ?! Играть (1), стримить (2), смотреть (3)");
+if(!type1) return message.channel.send("ДАГ ШО МНЕ ДЕЛАТЬ?! Играть (1), стримить (2), смотреть (3)");
 
 if(!what) return message.channel.send("Что дальше? :thinking:");
 
-}
+bot.user.setActivity(what, {type: type1}
 
 module.exports.help = {
 
