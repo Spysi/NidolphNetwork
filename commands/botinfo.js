@@ -7,11 +7,11 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#00c5ff")
     .setThumbnail(botIcon)
     .addField("Название:", bot.user.username)
-    .addField("Создан:", "Дерес ;3")
-    .addField("Спасибо за помощь:", "sqdEclipse") //Эклипс, гордись собой :D
-    .addField("Создан в:", bot.user.createdAt)
-    .addField("Специально для сервера:", "Nidolph (discord.gg/8QFREG2)")
-    .addField("Версия:", "0.2.0 (Alpha)")
+    .addField("Создатель:", "Дерес ;3#4177")
+    .addField("Спасибо за помощь:", "sqdEclipse#5372 (https://vk.com/vlad.ciphersky)") //Эклипс, гордись собой :D | Ору
+    .addField("Время создания:", bot.user.createdAt)
+    .addField("Специально для сервера:", "Nidolph (https://discord.gg/RnMUg74)")
+    .addField("Версия:", "0.2 (Alpha)")
 
      return message.channel.send(botEmbed);
 }
