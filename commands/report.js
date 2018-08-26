@@ -16,8 +16,6 @@ module.exports.run = async (bot, message, args) => {
     .setFooter("Просба администрации ответить на жалобу");
 
     let reportschannel = message.guild.channels.find(`name`, "репорты");
-
-    message.delete().catch(O_o=>{});
     reportschannel.send(reportEmbed);
 }
  
