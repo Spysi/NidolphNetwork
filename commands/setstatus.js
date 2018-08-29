@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
  module.exports.run = async (bot, message, args) => {
-        if(!message.author.hasPermission(ADMINISTRATOR)) return message.reply("Ты это не умеешь. ни ломай бота.");
+        if(!message.member.hasPermission(ADMINISTRATOR)) return message.reply("Ты это не умеешь. ни ломай бота.");
         const typee = args[0];
         const game = args.slice(1).join(' ');
           if(typee == "PLAYING"){
