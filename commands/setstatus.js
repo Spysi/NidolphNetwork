@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
  module.exports.run = async (bot, message, args) => {
-        if(!message.member.hasPermission(ADMINISTRATOR)) return message.reply("Ты это не умеешь. ни ломай бота.");
+        if(!message.member.hasPermission("ADMINISTRATOR")) return message.reply("Ты это не умеешь. ни ломай бота.")
         const typee = args[0];
         const game = args.slice(1).join(' ');
           if(typee == "PLAYING"){
@@ -18,11 +18,7 @@ const Discord = require("discord.js");
           else{
             message.reply("Нет такого статуса!");
           }
-         const okkkkk = new Discord.RichEmbed()
-            .setTitle('Статус изменен:')
-            .setDescription(`Тип: ${typee} | Статус: ${status}`)
-            .setFooter('NidolphNetwork');
-          message.channel.send(okkkkk);
+          message.channel.send(`**Статус изменен**. Теперь я ${typee} ${game}.`);
 
 }
  module.exports.help = {
