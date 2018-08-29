@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("Спасибо за помощь:", "sqdEclipse#5372 (https://vk.com/vlad.ciphersky)") //Эклипс, гордись собой :D | Ору
     .addField("Время создания:", bot.user.createdAt)
     .addField("Специально для сервера:", "Nidolph (https://discord.gg/RnMUg74)")
-    .addField("Версия:", "0.2 (Alpha)")
+    .addField("Версия:", "0.2.2 (Alpha)")
 
      return message.channel.send(botEmbed);
 }
